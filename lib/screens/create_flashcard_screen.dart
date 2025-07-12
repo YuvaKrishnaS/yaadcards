@@ -50,7 +50,7 @@ class _CreateFlashcardScreenState extends State<CreateFlashcardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.flashcard != null ? 'Edit Flashcard' : 'Create Flashcard'),
+        title: Text(widget.flashcard != null ? 'Edit Flashcards' : 'Create Flashcard'),
         actions: [
           TextButton(
             onPressed: _saveFlashcard,
