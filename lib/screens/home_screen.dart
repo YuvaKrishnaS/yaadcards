@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import '../services/storage_service.dart';
 import '../widgets/flashcard_tile.dart';
@@ -6,6 +7,7 @@ import '../ads/ad_helper.dart';
 import 'create_flashcard_screen.dart';
 import 'settings_screen.dart';
 import 'flashcard_detail_screen.dart';
+import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -28,10 +30,16 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('YaadCards'),
+        title: Text(
+          'YaadCards',
+          style: GoogleFonts.instrumentSans(
+            // fontSize: 24
+            fontWeight: FontWeight.w700
+          )
+        ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.settings),
+            icon: const Icon(LineAwesomeIcons.cogs_solid),
             onPressed: () {
               Navigator.push(
                 context,
